@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hide-password',
   templateUrl: './hide-password.component.html',
   styleUrls: ['./hide-password.component.scss']
 })
-export class HidePasswordComponent implements OnInit {
+export class HidePasswordComponent {
+  public showPassword: boolean = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
   }
-
 }
